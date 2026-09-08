@@ -20,6 +20,27 @@
 
 /* Readable text + visible reveal states */
 .reveal.is-visible,.reveal--visible{opacity:1!important;transform:none!important}
+.whatsapp-icon{width:20px!important;height:20px!important;display:block!important;flex:0 0 20px!important}
+.whatsapp-label{font-size:1rem!important}
+.whatsapp-arrow{font-size:1rem!important}
+.footer-whatsapp-link{display:flex!important;align-items:center!important;gap:10px!important}
+.footer-whatsapp-link .whatsapp-icon{width:20px!important;height:20px!important;flex:0 0 20px!important}
+
+/* Slightly larger, easier-to-read typography */
+.nav-links a{font-size:.9rem!important}
+.hero p{font-size:1.1rem!important}
+.intro-grid p,.section-head p,.about-copy>p{font-size:1.02rem!important}
+.filter-bar button{font-size:.78rem!important}
+.product-category{font-size:.7rem!important}
+.product-body h3{font-size:1.72rem!important}
+.video-feature__copy p{font-size:1rem!important}
+.gallery-caption{font-size:1.22rem!important}
+.address{font-size:1.62rem!important}
+.phone-list a{font-size:1rem!important}
+.footer-intro,.site-footer p{font-size:.95rem!important}
+.site-footer a:not(.brand){font-size:.98rem!important}
+.footer-label{font-size:.67rem!important}
+.footer-bottom{font-size:.72rem!important}
 
 @media(min-width:851px){
  .nav-brand .brand{background:transparent!important;border-radius:0!important;padding:0!important}
@@ -34,7 +55,7 @@
  .main-nav.is-open{display:flex!important;position:absolute!important;top:66px!important;left:0!important;right:0!important;flex-direction:column!important;align-items:stretch!important;gap:10px!important}
  .main-nav .nav-brand{display:none!important}
  .nav-links{width:100%!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:4px!important;margin:0!important}
- .nav-links a{font-size:1rem!important;padding:13px 16px!important;border-radius:var(--curve-pill)!important}
+ .nav-links a{font-size:1.05rem!important;padding:13px 16px!important;border-radius:var(--curve-pill)!important}
  .nav-links a:after{display:none!important}
  .main-nav>.whatsapp-btn{width:100%!important}
  .mobile-brand{display:block!important}
@@ -49,21 +70,28 @@
  .hero-section{min-height:760px!important}
  .hero-content{padding-top:90px!important}
  .hero h1{font-size:clamp(3rem,13vw,5rem)!important}
- .hero p{font-size:1rem!important}
+ .hero p{font-size:1.06rem!important}
  .intro-grid,.section-head,.about-grid,.location-grid{grid-template-columns:1fr!important;gap:34px!important}
+ .intro-grid p,.section-head p,.about-copy>p{font-size:1.05rem!important}
  .products-grid{grid-template-columns:1fr!important;gap:20px!important}
  .product-card{border-radius:26px!important}
  .product-body{padding:22px!important}
- .product-body h3{font-size:1.55rem!important}
+ .product-body h3{font-size:1.62rem!important}
  .video-feature{grid-template-columns:1fr!important;border-radius:28px!important}
  .video-feature__media{min-height:360px!important}
  .video-feature__copy{padding:46px 28px!important}
+ .video-feature__copy p{font-size:1.05rem!important}
  .gallery-grid{grid-template-columns:repeat(2,1fr)!important;grid-auto-rows:150px!important;gap:10px!important}
  .gallery-tile,.gallery-tile:nth-child(n){grid-column:span 1!important;grid-row:span 2!important;border-radius:20px!important}
  .gallery-tile:nth-child(1),.gallery-tile:nth-child(6),.gallery-tile:nth-child(10){grid-column:span 2!important}
  .map-wrap{height:380px!important;border-radius:26px!important}
+ .address{font-size:1.48rem!important}
+ .phone-list a{font-size:1.05rem!important}
  .site-footer{border-radius:28px 28px 0 0!important;padding:55px 18px 22px!important}
  .footer-grid{grid-template-columns:1fr!important;gap:34px!important}
- .footer-bottom{margin-top:38px!important;flex-direction:column!important;gap:8px!important}
+ .footer-intro,.site-footer p{font-size:1rem!important}
+ .site-footer a:not(.brand){font-size:1.05rem!important}
+ .footer-bottom{margin-top:38px!important;flex-direction:column!important;gap:8px!important;font-size:.74rem!important}
  .floating-wa{right:16px!important;bottom:16px!important}
+ .whatsapp-icon{width:21px!important;height:21px!important;flex-basis:21px!important}
 }
