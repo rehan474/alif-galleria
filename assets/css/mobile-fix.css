@@ -1,6 +1,6 @@
 :root{--curve-xl:42px;--curve-lg:30px;--curve-md:22px;--curve-pill:999px}
 
-/* Premium rounded / oval treatment — restores the curved design without changing layout */
+/* Premium rounded / oval treatment */
 .main-nav{border-radius:var(--curve-xl)!important;overflow:hidden}
 .whatsapp-btn,.solid-btn,.outline-btn{border-radius:var(--curve-pill)!important}
 .filter-bar button{border-radius:var(--curve-pill)!important}
@@ -14,20 +14,20 @@
 .about-badge{border-radius:var(--curve-md)!important}
 .map-wrap{border-radius:var(--curve-xl)!important;overflow:hidden}
 .site-footer{border-radius:var(--curve-xl) var(--curve-xl) 0 0!important}
-.floating-wa{border-radius:var(--curve-pill)!important;display:inline-flex!important;align-items:center!important;gap:9px!important}
-.floating-wa .whatsapp-icon{width:21px!important;height:21px!important;display:block!important;flex:0 0 21px!important}
+.floating-wa{border-radius:var(--curve-pill)!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:9px!important}
 .play-badge{border-radius:50%!important}
 .lightbox__close{border-radius:50%!important}
 
-/* Readable text + visible reveal states */
-.reveal.is-visible,.reveal--visible{opacity:1!important;transform:none!important}
-.whatsapp-icon{width:20px!important;height:20px!important;display:block!important;flex:0 0 20px!important}
-.whatsapp-label{font-size:1rem!important}
-.whatsapp-arrow{font-size:1rem!important}
+/* WhatsApp logos */
+.whatsapp-icon{width:21px!important;height:21px!important;display:block!important;flex:0 0 21px!important;color:currentColor!important}
+.whatsapp-btn .whatsapp-icon{width:21px!important;height:21px!important}
+.floating-wa .whatsapp-icon{width:24px!important;height:24px!important;display:block!important;flex:0 0 24px!important;color:#25D366!important;fill:#25D366!important}
+.floating-wa span{font-size:.78rem!important;line-height:1!important}
+.floating-wa strong{display:grid!important;place-items:center!important}
 .footer-whatsapp-link{display:flex!important;align-items:center!important;gap:10px!important}
 .footer-whatsapp-link .whatsapp-icon{width:20px!important;height:20px!important;flex:0 0 20px!important}
 
-/* Slightly larger, easier-to-read typography */
+/* Slightly larger readable text */
 body{font-size:16px!important}
 .nav-links a{font-size:1rem!important}
 .hero p{font-size:1.15rem!important;line-height:1.75!important}
@@ -43,6 +43,8 @@ body{font-size:16px!important}
 .site-footer a:not(.brand){font-size:1.02rem!important}
 .footer-label{font-size:.7rem!important}
 .footer-bottom{font-size:.75rem!important}
+
+.reveal.is-visible,.reveal--visible{opacity:1!important;transform:none!important}
 
 @media(min-width:851px){
  .nav-brand .brand{background:transparent!important;border-radius:0!important;padding:0!important}
@@ -97,5 +99,5 @@ body{font-size:16px!important}
  .site-footer a:not(.brand){font-size:1.06rem!important}
  .footer-bottom{margin-top:38px!important;flex-direction:column!important;gap:8px!important;font-size:.76rem!important}
  .floating-wa{right:16px!important;bottom:16px!important;padding:12px 18px!important;font-size:1.02rem!important}
- .floating-wa .whatsapp-icon{width:22px!important;height:22px!important;flex-basis:22px!important}
+ .floating-wa .whatsapp-icon{width:24px!important;height:24px!important;flex-basis:24px!important}
 }
