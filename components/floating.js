@@ -1,0 +1,1 @@
+import {whatsappUrl} from '../utils/whatsapp.js';export function FloatingWhatsApp(){return `<a class="floating-wa" href="${whatsappUrl("Hi, I'm interested in Alif Galleria products.")}" target="_blank" rel="noopener noreferrer" aria-label="Chat with Alif Galleria on WhatsApp"><span>WhatsApp</span><strong>↗</strong></a>`}

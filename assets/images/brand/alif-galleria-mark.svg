@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <!-- White outer contour / stroke -->
+    <filter id="white-outline" x="-20%" y="-20%" width="140%" height="140%">
+      <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="10"/>
+      <feFlood flood-color="#FFFFFF" result="WHITE"/>
+      <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"/>
+      <feMerge>
+        <feMergeNode in="OUTLINE"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Rich gold gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2C042"/>
+      <stop offset="50%" stop-color="#E1A126"/>
+      <stop offset="100%" stop-color="#C58414"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Central Calligraphy Mark (Isolated) -->
+  <g filter="url(#white-outline)" fill="url(#gold)">
+    <!-- Vertical Alif Stem with top serif flourish -->
+    <path d="M 378 110 
+             C 368 140, 345 155, 342 185
+             L 342 410
+             C 342 435, 360 450, 395 435
+             C 402 385, 402 245, 402 185
+             C 408 178, 418 182, 424 175
+             C 421 155, 400 128, 378 110 Z" />
+
+    <!-- Looping Lower Character with Terminal Sweep -->
+    <path d="M 310 310
+             C 230 350, 140 435, 140 500
+             C 140 550, 180 580, 260 555
+             C 300 540, 335 520, 370 535
+             C 415 550, 440 495, 440 460
+             C 385 490, 335 480, 305 440
+             C 285 410, 260 420, 260 480
+             C 210 490, 195 460, 205 430
+             C 225 385, 275 340, 310 310 Z" />
+  </g>
+</svg>

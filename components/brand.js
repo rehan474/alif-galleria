@@ -1,0 +1,1 @@
+export function Brand(footer=false){return `<a class="brand ${footer?'brand--footer':''}" href="#home" aria-label="Alif Galleria home"><img class="brand__mark" src="assets/images/brand/alif-galleria-mark.svg" alt=""><span class="brand__copy"><strong>Alif Galleria</strong><small>DOORS · WINDOWS · FABRICATION</small></span></a>`}
