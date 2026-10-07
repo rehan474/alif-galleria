@@ -74,3 +74,26 @@ Then open `http://localhost:8080`.
 ## Important
 
 Some product categories currently share a relevant uploaded image because a dedicated photo for every one of the ten categories was not supplied. Replace those image paths in `data/site.js` when dedicated product photos are available.
+
+## SEO and static content
+
+`index.html` is generated and committed with the full page content so visitors and crawlers can read the business details without JavaScript. JavaScript enhances navigation, filters and the gallery. Edit section components and `data/site.js` for content; edit `scripts/index.template.html` for head metadata. Then run:
+
+```bash
+npm run build
+npm run check
+```
+
+The dependency-free build uses Node.js and is also configured in `vercel.json`. The output directory is the repository root. Keep the generated `index.html` in deployments, together with `robots.txt` and `sitemap.xml`.
+
+The canonical origin is `https://www.alifgalleria.com`, matching the live apex-to-www redirect. The sitemap lists only the homepage because Products, Gallery, About and Location are sections on that page, not separate URLs. Add only real, public, canonical pages when the site grows. Do not redirect missing URLs to the homepage to hide 404 errors.
+
+Business structured data uses the address, contact numbers, map location and product categories already present on the site. No unverified opening hours, reviews, prices or service coverage are included. Keep these details consistent with your Google Business Profile. Clear, visible business information and crawlable content support search and AI discovery; inclusion and rankings are not guaranteed.
+
+## Search Console after deployment
+
+1. Open `https://www.alifgalleria.com/sitemap.xml` and confirm it returns HTTP 200 with XML, then check `/robots.txt`.
+2. In Search Console's **Sitemaps** section, submit `https://www.alifgalleria.com/sitemap.xml`. A sitemap is a discovery file; it is not a page to request indexing for.
+3. Inspect `https://www.alifgalleria.com/`, run **Test live URL**, then request indexing if it is available to Google.
+4. If the sitemap still returns 404, check the Vercel deployment's branch, root directory and output directory. Confirm the deployed commit includes these files.
+5. Validate the homepage's business structured data in Google's Rich Results Test and monitor Search Console after Google recrawls.
