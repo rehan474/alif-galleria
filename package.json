@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
   }
 }
