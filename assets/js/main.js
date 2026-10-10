@@ -13,3 +13,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.conta
 document.addEventListener('click',e=>{if(!e.target.closest('.nav-shell'))setNav(false)});
 const sections=[...document.querySelectorAll('main section[id]')],navLinks=[...document.querySelectorAll('[data-nav]')];const sectionObserver=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)navLinks.forEach(a=>a.classList.toggle('active',a.dataset.nav===e.target.id))})},{rootMargin:'-30% 0px -55% 0px',threshold:.05});sections.forEach(s=>sectionObserver.observe(s));
 window.addEventListener('scroll',()=>document.documentElement.style.setProperty('--scroll-y',`${window.scrollY}px`),{passive:true});
+
+const copyAddress=document.querySelector('[data-copy-address]');
+copyAddress?.addEventListener('click',async()=>{
+ const feedback=document.querySelector('.copy-feedback');
+ try{await navigator.clipboard.writeText(document.querySelector('#location address').innerText.replaceAll('\n',', '));feedback.textContent='Address copied. Ready to share.'}
+ catch{feedback.textContent='Select the address above to copy it.'}
+});
