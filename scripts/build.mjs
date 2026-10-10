@@ -18,6 +18,9 @@ const schema = {
     '@type': 'PostalAddress', streetAddress: 'Mattur Main Road, Urgadur Circle',
     addressLocality: 'Shivamogga', addressRegion: 'Karnataka', postalCode: '577205', addressCountry: 'IN'
   },
+  geo: {'@type': 'GeoCoordinates', latitude: 13.910869, longitude: 75.578156},
+  areaServed: {'@type':'City', name:'Shivamogga'},
+  mainEntityOfPage: `${origin}/`,
   hasMap: 'https://www.google.com/maps?q=13.910869,75.578156',
   hasOfferCatalog: {
     '@type': 'OfferCatalog', name: 'Doors, windows, panels and fabrication',

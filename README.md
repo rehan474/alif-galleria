@@ -19,7 +19,7 @@ Then open `http://localhost:8080`.
 
 - `components/header.js` — responsive navigation + active section state
 - `components/brand.js` — logo mark + Alif Galleria wordmark used in header/footer
-- `components/hero.js` — video hero and WhatsApp CTA
+- `components/hero.js` — image-led entrance hero and collection links
 - `components/intro.js` — intro section
 - `components/products.js` — filterable product section + product cards
 - `components/video.js` — process video section
@@ -54,9 +54,9 @@ Then open `http://localhost:8080`.
 
 ## Effects and fixes included
 
-- Scroll reveal animations with reduced-motion support
-- Hero video autoplay/muted/loop/playsInline with poster fallback
-- Hero parallax movement
+- Subtle content transitions with reduced-motion support
+- Image-led hero with a prioritized entrance-door photo
+- Warm ivory and dark green architectural design
 - Product image hover zoom + overlays
 - Product filters
 - Gallery filters
@@ -97,3 +97,8 @@ Business structured data uses the address, contact numbers, map location and pro
 3. Inspect `https://www.alifgalleria.com/`, run **Test live URL**, then request indexing if it is available to Google.
 4. If the sitemap still returns 404, check the Vercel deployment's branch, root directory and output directory. Confirm the deployed commit includes these files.
 5. Validate the homepage's business structured data in Google's Rich Results Test and monitor Search Console after Google recrawls.
+
+
+## October 2026 design refresh
+
+The responsive design is defined in `assets/css/styles.css`; the older `mobile-fix.css` is no longer loaded. The homepage includes editorial product introductions, product descriptions, a workshop video with deferred loading, a keyboard-accessible gallery dialog, project guidance and native FAQ accordions. Location uses the existing map coordinates with direct Google Maps directions, telephone links and a visiting-hours WhatsApp enquiry. Opening hours remain unverified and are not asserted on the page or in structured data.

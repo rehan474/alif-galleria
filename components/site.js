@@ -1,2 +1,3 @@
 import {Header} from './header.js';import {Hero} from './hero.js';import {Intro} from './intro.js';import {Products} from './products.js';import {VideoFeature} from './video.js';import {Gallery} from './gallery.js';import {About} from './about.js';import {Location} from './location.js';import {Footer} from './footer.js';import {FloatingWhatsApp} from './floating.js';
-export function renderSite(){return `${Header()}<main>${Hero()}${Intro()}${Products()}${VideoFeature()}${Gallery()}${About()}${Location()}</main>${Footer()}${FloatingWhatsApp()}`;}
+import {FAQ} from './faq.js';
+export function renderSite(){return `${Header()}<main id="main-content">${Hero()}${Intro()}${Products()}${VideoFeature()}${About()}${Gallery()}${FAQ()}${Location()}</main>${Footer()}${FloatingWhatsApp()}`;}

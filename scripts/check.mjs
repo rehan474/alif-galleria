@@ -19,3 +19,11 @@ for (const match of html.matchAll(/(?:src|href|poster)="([^"#]+)"/g)) {
 }
 assert(!html.includes('{{SITE_CONTENT}}'));
 console.log('Static content, asset paths, metadata, structured data and sitemap checks passed.');
+const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
+for (const match of html.matchAll(/href="#([^"]+)"/g)) assert(ids.has(match[1]), `Missing anchor: ${match[1]}`);
+assert.equal(schema.geo.latitude, 13.910869);
+assert.equal(schema.geo.longitude, 75.578156);
+assert(html.includes('maps/dir/?api=1&amp;destination=13.910869,75.578156'));
+assert(html.includes('role="dialog" aria-modal="true"'));
+assert.equal((html.match(/<details>/g) || []).length, 4);
+console.log('Navigation anchors, map destination, gallery accessibility and FAQ checks passed.');
