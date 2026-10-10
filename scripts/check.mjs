@@ -15,7 +15,7 @@ assert.deepEqual([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]), [sc
 assert((await readFile('robots.txt', 'utf8')).includes(`Sitemap: ${schema.url}sitemap.xml`));
 for (const match of html.matchAll(/(?:src|href|poster)="([^"#]+)"/g)) {
   const path = match[1];
-  if (!/^(https?:|tel:|data:)/.test(path)) await access(path);
+  if (!/^(https?:|tel:|data:)/.test(path)) await access(path.split('?')[0]);
 }
 assert(!html.includes('{{SITE_CONTENT}}'));
 console.log('Static content, asset paths, metadata, structured data and sitemap checks passed.');

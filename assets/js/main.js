@@ -5,13 +5,11 @@ const app=document.querySelector('#app');if(!app.querySelector('main'))app.inner
 window.initEffects=(scope=document)=>{const items=scope.querySelectorAll?.('.reveal:not(.reveal--visible)')||[];const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('reveal--visible');obs.unobserve(e.target)}}),{threshold:.1});items.forEach(i=>obs.observe(i));};
 window.initEffects();initProducts();initGallery();
 document.documentElement.classList.add("js-effects");
-const nav=document.querySelector('.main-nav'),toggle=document.querySelector('#nav-toggle');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',open)});document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');toggle.classList.remove('is-open');toggle.setAttribute('aria-expanded','false')}));
+const nav=document.querySelector('.main-nav'),toggle=document.querySelector('#nav-toggle');
+function setNav(open){nav.classList.toggle('is-open',open);toggle.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu')}
+toggle.addEventListener('click',()=>setNav(!nav.classList.contains('is-open')));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>setNav(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('is-open')){setNav(false);toggle.focus()}});
+document.addEventListener('click',e=>{if(!e.target.closest('.nav-shell'))setNav(false)});
 const sections=[...document.querySelectorAll('main section[id]')],navLinks=[...document.querySelectorAll('[data-nav]')];const sectionObserver=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)navLinks.forEach(a=>a.classList.toggle('active',a.dataset.nav===e.target.id))})},{rootMargin:'-30% 0px -55% 0px',threshold:.05});sections.forEach(s=>sectionObserver.observe(s));
 window.addEventListener('scroll',()=>document.documentElement.style.setProperty('--scroll-y',`${window.scrollY}px`),{passive:true});
-
-const closeNav=()=>{nav.classList.remove('is-open');toggle.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu')};
-toggle.addEventListener('click',()=>toggle.setAttribute('aria-label',nav.classList.contains('is-open')?'Close menu':'Open menu'));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('is-open')){closeNav();toggle.focus()}});
-document.addEventListener('click',e=>{if(!e.target.closest('.nav-shell'))closeNav()});
-
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',closeNav));
