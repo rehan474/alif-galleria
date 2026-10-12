@@ -8,7 +8,7 @@ const schema = {
   '@id': `${origin}/#business`,
   name: BUSINESS.name,
   url: `${origin}/`,
-  description: 'Doors, UPVC windows, architectural panels and interior and exterior fabrication in Shivamogga, Karnataka.',
+  description: 'Steel doors, wooden doors, UPVC windows, architectural panels and fabrication at Mattur Main Road, Urgadur Circle, Shivamogga, Karnataka.',
   image: `${origin}/assets/images/brand/hero-poster.jpg`,
   telephone: `+${BUSINESS.primary}`,
   contactPoint: [BUSINESS.primary, BUSINESS.secondary].map(number => ({

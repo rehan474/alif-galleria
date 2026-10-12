@@ -1,6 +1,6 @@
 export const questions=[
  ['Where is Alif Galleria located?', 'You can find Alif Galleria on Mattur Main Road, Urgadur Circle, Shivamogga, Karnataka — 577205. Use the directions link below to plan your visit.'],
- ['What products can I explore?', 'Our collection includes steel, wooden, UPVC, FRP and PVC doors, UPVC windows, charcoal, fluted and WPC panels, plus interior and exterior fabrication. Contact us for current product availability.'],
+ ['Where can I find steel doors and UPVC windows in Shivamogga?', 'Alif Galleria offers steel doors and UPVC windows at Mattur Main Road, Urgadur Circle, Shivamogga. You can also explore wooden, FRP, PVC and UPVC doors, architectural panels and fabrication. Call +91 76192 68754 for current options and availability.'],
  ['How do I enquire about a product?', 'Choose a product and tap Enquire to open WhatsApp. The product name is included in your message. You can also call +91 76192 68754 or +91 87628 57645.'],
  ['What should I share when discussing a project?', 'Share the product you need, approximate measurements and any photos or design references. Our team can then discuss the available options and your requirements.']
 ];
